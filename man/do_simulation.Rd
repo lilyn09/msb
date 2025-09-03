@@ -31,6 +31,11 @@ assumption is TRUE or not. Default is TRUE.}
 \item{data_adjust_all}{A logical value indicating whether to adjust by all effect
 modifiers. Default is TRUE.}
 
+\item{wts_type}{A character string specifying the type of weights to use in MAIC. 
+Options are "rescaled_weights" or "weights". "rescaled_weights" 
+rescales the weights so they sum to the original sample size, while "weights" 
+uses the raw propensity score weights. Default is "rescaled weights".}
+
 \item{N_sim.}{An integer value representing the number of times to repeat each simulation.
 Default is 1000.}
 

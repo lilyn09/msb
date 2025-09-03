@@ -14,14 +14,14 @@ of `analyse_statistics()`.}
 in the table to. Default is 3.}
 }
 \value{
-a data.frame
+a flextable
 }
 \description{
 Function to generate table of study statistics
 }
 \examples{
 simulation_df <- do_simulation(10)
-stats_df <- analyse_simulations_3(simulation_df)$shared_results
+stats_df <- analyse_simulations(simulation_df)$shared_results
 format_table(stats_df)
 
 }

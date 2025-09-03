@@ -20,6 +20,11 @@ by `gen_data()`}
 \item{adjust_all}{A logical value indicating whether to adjust for all effect
 modifiers. Default is TRUE. If TRUE we adjust by both effect modifiers X1 and
 X2, if FALSE we only adjust by X1.}
+
+\item{type}{A character string specifying the type of weights to use. 
+Options are "rescaled_weights" or "weights". "rescaled_weights" 
+rescales the weights so they sum to the original sample size, while "weights" 
+uses the raw propensity score weights. Default is "rescaled_weights".}
 }
 \value{
 A data.frame of maic results, consisting of maic_log_OR, maic_ESS,
