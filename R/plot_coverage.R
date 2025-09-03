@@ -60,7 +60,7 @@ plot_maic_coverage <- function(simulation_df, true_value, level = 0.95,
       labels = c(`TRUE` = "Coverers", `FALSE` = "Non-Coverers"),
       name = " "
     ) +
-    ggplot2::xlab("95% Confidence Intervals") +
+    ggplot2::xlab(paste0(level * 100, "% Confidence Intervals")) +
     ggplot2::ggtitle(if(is.null(plot_title)) "MAIC coverage" else plot_title) +
     ggplot2::theme_minimal() +
     ggplot2::theme(
@@ -131,7 +131,7 @@ plot_stc_coverage <- function(simulation_df, true_value, level = 0.95,
       labels = c(`TRUE` = "Coverers", `FALSE` = "Non-Coverers"),
       name = " "
     ) +
-    ggplot2::xlab("95% Confidence Intervals") +
+    ggplot2::xlab(paste0(level * 100, "% Confidence Intervals")) +
     ggplot2::ggtitle(if(is.null(plot_title)) "STC Coverage" else plot_title) +
     ggplot2::theme_minimal() +
     ggplot2::theme(
@@ -203,7 +203,7 @@ plot_bucher_coverage <- function(simulation_df, true_value, level = 0.95,
       labels = c(`TRUE` = "Coverers", `FALSE` = "Non-Coverers"),
       name = " "
     ) +
-    ggplot2::xlab("95% Confidence Intervals") +
+    ggplot2::xlab(paste0(level * 100, "% Confidence Intervals")) +
     ggplot2::ggtitle(if(is.null(plot_title)) "Bucher Coverage" else plot_title) +
     ggplot2::theme_minimal() +
     ggplot2::theme(

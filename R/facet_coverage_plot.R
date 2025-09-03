@@ -91,7 +91,7 @@ facet_coverage_plot_3 <- function(datasets, facet_names, max_val = NULL, title =
       labels = c(`TRUE` = "Contains true value", `FALSE` = "Does not contain true value")) +
     ggplot2::facet_grid(facet ~ method) +
     ggplot2::labs(
-      x = "95% Confidence Intervals",
+      x = paste0(level * 100, "% Confidence Intervals"),
       y = "Centile",
       color = NULL
     ) +
