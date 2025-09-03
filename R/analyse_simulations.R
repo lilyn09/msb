@@ -8,6 +8,8 @@
 #' sim_results <- do_simulation(10)
 #'
 #' analyse_simulations(sim_results)
+#' 
+#' @export
 analyse_simulations <- function(sim_results) {
   results_df <- sim_results$results_df
   true_value <- sim_results$true_val

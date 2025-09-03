@@ -19,4 +19,5 @@ Function to analyse simulations
 sim_results <- do_simulation(10)
 
 analyse_simulations(sim_results)
+
 }
