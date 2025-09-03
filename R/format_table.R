@@ -38,9 +38,9 @@ format_table <- function(stats_df, dp = 3) {
   ) %>%
   dplyr::mutate_if(is.numeric, ~ round(., dp))
 
-ft <- flextable(table_df) %>%
-  theme_vanilla() %>%
-  colformat_double(j = 3:5, digits = 3)
+ft <- flextable::flextable(table_df) %>%
+  flextable::theme_vanilla() %>%
+  flextable::colformat_double(j = 3:5, digits = 3)
 
 ft
 }
