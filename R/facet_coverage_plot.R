@@ -16,14 +16,14 @@
 #' @examples
 #' simulation_df_1 <- do_simulation(10)$results_df
 #' simulation_df_2 <- do_simulation(10)$results_df
-#'
+#' 
 #' datasets <- list(simulation_df_1, simulation_df_2)
 #'
-#' facet_coverage_plot_3(datasets = datasets,
+#' facet_coverage_plot(datasets = datasets,
 #'                 facet_names = c("1", "2"))
 #'
 #' @export
-facet_coverage_plot_3 <- function(datasets, facet_names, max_val = NULL, title = NULL, level = 0.95,
+facet_coverage_plot <- function(datasets, facet_names, max_val = NULL, title = NULL, level = 0.95,
                                 true_val = 0.5) {
 
   methods <- c("maic", "stc", "bucher")

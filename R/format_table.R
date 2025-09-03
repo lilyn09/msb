@@ -9,7 +9,7 @@
 #'
 #' @examples
 #' simulation_df <- do_simulation(10)
-#' stats_df <- analyse_simulations(simulation_df)$shared_results
+#' stats_df <- analyse_simulations_3(simulation_df)$shared_results
 #' format_table(stats_df)
 #'
 #' @export

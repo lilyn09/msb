@@ -41,12 +41,12 @@ gradfn <- function(a1, X){
 #'
 #' This function calculates the Effective Sample Size (ESS) based on the provided weights.
 #'
-#' @param wt A numeric vector of weights - a non-empty numeric vector with all non-missing non-negative values.
+#' @param wt A numeric vector of weights.
 #' @return A single numeric value representing the Effective Sample Size (ESS).
 #' @examples
 #'
 #' weights <- c(0.2, 0.5, 0.3, 0.1)
-#' ess <- maic.engine:::ess_calc(weights)
+#' ess <- ess_calc(weights)
 #' print(ess)
 #'
 #' @noRd
