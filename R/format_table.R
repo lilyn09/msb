@@ -5,15 +5,14 @@
 #' @param dp An integer representing the number of decimal places to round statistics
 #' in the table to. Default is 3.
 #'
-#' @return a data.frame
+#' @return a flextable
 #'
 #' @examples
 #' simulation_df <- do_simulation(10)
-#' stats_df <- analyse_simulations_3(simulation_df)$shared_results
+#' stats_df <- analyse_simulations(simulation_df)$shared_results
 #' format_table(stats_df)
 #'
 #' @export
-
 format_table <- function(stats_df, dp = 3) {
   table_df <- data.frame(
     Section = c("Bias", "", "",
@@ -39,5 +38,9 @@ format_table <- function(stats_df, dp = 3) {
   ) %>%
   dplyr::mutate_if(is.numeric, ~ round(., dp))
 
-  table_df
+ft <- flextable(table_df) %>%
+  theme_vanilla() %>%
+  colformat_double(j = 3:5, digits = 3)
+
+ft
 }

@@ -13,6 +13,10 @@
 #' assumption is TRUE or not. Default is TRUE.
 #' @param data_adjust_all A logical value indicating whether to adjust by all effect
 #' modifiers. Default is TRUE.
+#' @param wts_type A character string specifying the type of weights to use in MAIC. 
+#' Options are "rescaled_weights" or "weights". "rescaled_weights" 
+#' rescales the weights so they sum to the original sample size, while "weights" 
+#' uses the raw propensity score weights. Default is "rescaled weights".
 #'
 #' @return A list containing a data.frame `results_df` and numeric `true_val`
 #'
