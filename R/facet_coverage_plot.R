@@ -5,7 +5,7 @@
 #' @param max_val A numeric representing the x-axis limit. Default is NULL, where
 #' the value is calculated automatically from the data.
 #' @param title A string representing the plot title. Default is NULL, where the
-#' title is automatically "Coverage".
+#' title is automatically "Coverage Plot".
 #' @param level A numeric representing the nominal confidence interval level. Default
 #' is 0.95.
 #' @param true_val A numeric representing the true B vs C treatment effect. Default is

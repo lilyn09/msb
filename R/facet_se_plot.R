@@ -5,7 +5,7 @@
 #' @param max_val A numeric representing the x-axis limit. Default is NULL, where
 #' the value is calculated automatically from the data.
 #' @param title A string representing the plot title. Default is NULL, where the
-#' title is automatically "Standard Errors".
+#' title is automatically "Standard Errors Plot".
 #'
 #' @return A ggplot of MAIC, STC and Bucher se values.
 #'
@@ -117,7 +117,7 @@ facet_se_plot <- function(datasets, facet_names, max_val = NULL, title = NULL) {
       panel.border = ggplot2::element_rect(color = "grey30", fill = NA, size = 0.5)
     ) +
     ggplot2::labs(
-      title = ifelse(is.null(title), "Plot", title),
+      title = ifelse(is.null(title), "Standard Errors Plot", title),
       x = "Standard Errors",
       shape = ""
     ) +

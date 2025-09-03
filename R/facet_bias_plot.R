@@ -5,7 +5,7 @@
 #' @param max_val A numeric representing the x-axis limit. Default is NULL, where
 #' the value is calculated automatically from the data.
 #' @param title A string representing the plot title. Default is NULL, where the
-#' title is automatically "Bias".
+#' title is automatically "Bias Plot".
 #'
 #' @return A ggplot of MAIC, STC and Bucher bias values.
 #'
@@ -143,7 +143,7 @@ facet_bias_plot <- function(datasets, facet_names, max_val = NULL, title = NULL)
       limits = c(-max_val, max_val),
       name = "Bias"
     ) +
-    ggplot2::ggtitle(ifelse(is.null(title), "Plot", title))
+    ggplot2::ggtitle(ifelse(is.null(title), "Bias Plot", title))
 
   if(nrow(exceeding_positive) > 0) {
     p <- p +
