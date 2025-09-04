@@ -2,9 +2,9 @@
 #'
 #' This function performs multiple simulation runs comparing MAIC, STC, and Bucher methods.
 #'
-#' @param N_sim. An integer value representing the number of times to repeat each simulation.
+#' @param N_sim An integer value representing the number of times to repeat each simulation.
 #' Default is 1000.
-#' @param seed. An integer value representing the random seed. Default is 1234.
+#' @param seed An integer value representing the random seed. Default is 1234.
 #' @param data_N An integer value representing the number of subjects in each trial.
 #' Default is 500.
 #' @param data_em_strength A numeric value representing the effect modifier strength.
