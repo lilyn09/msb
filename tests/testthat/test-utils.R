@@ -31,7 +31,7 @@ test_that("calc_ci validates input lengths", {
   # Test mismatched vector lengths
   expect_error(
     calc_ci(c(1, 2), c(0.1, 0.2, 0.3)),
-    "length\\(x\\) == length\\(se\\) is not TRUE"
+    "length\\(est\\) == length\\(se\\) is not TRUE"
   )
 })
 
