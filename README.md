@@ -2,7 +2,7 @@
 
 ## Overview
 
-The `msb` package provides tools to simulate and evaluate the performance of indirect comparison methods commonly used in health technology assessment. The package implements three key methods:
+The `msb` package provides tools to simulate and evaluate the performance of three indirect comparison methods:
 
 - **MAIC** (Matching-Adjusted Indirect Comparison)
 - **STC** (Simulated Treatment Comparison) 
@@ -12,10 +12,19 @@ The `msb` package provides tools to simulate and evaluate the performance of ind
 
 ## Features
 
-- **Data Generation**: Generate synthetic trial data with customisable parameters.
-- **Simulation Implementation**: Apply MAIC, STC, and Bucher methods to your data.
+- **Data Generation**: Generate synthetic trial data.
+- **Simulation Implementation**: Apply MAIC, STC, and Bucher methods to your data with the desired number of simulation runs.
 - **Analysis**: Calculate performance metrics such as bias, standard errors, and coverage.
 - **Visualisation**: Create plots and tables.
+
+**Adjustable Parameters**:
+
+- **Sample Size** - Examine how methods perform with varying trial sizes
+- **Population Overlap** - Assess impact of different degrees of patient population similarity between studies
+- **Effect Modifier Strength** - Evaluate sensitivity to the magnitude of treatment effect modification
+- **Adjustment Strategy** - Compare full versus partial adjustment for effect modifiers to understand the trade-offs in bias reduction
+
+The package enables exploration of how these four parameters influence the comparative performance of indirect comparison methods, allowing users to understand when each approach is most appropriate for their specific research context.
 
 ## Installation
 
@@ -28,12 +37,12 @@ devtools::install_github("lilyn09/msb")
 
 ## Example Workflow
 
-### Run Simulation
+### Select Parameters and Run Simulation
 
 ```r
 library(msb)
 
-# Run Simulations with N = 100, overlap = 0.5 then 0.75
+# Run Simulations with N = 100, overlap = 0.5 and 0.75
 sim_1 <- do_simulation(N_sim = 100, 
                        data_overlap_param = 0.5)
 
