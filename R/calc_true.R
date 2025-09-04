@@ -1,10 +1,5 @@
 #' Function to calculate true values
 #'
-#' @param em_strength. A numeric value representing the effect modifier strength. Default
-#' is 0.1.
-#' @param overlap_param. A numeric value representing the overlap between the AB and AC trial
-#' populations. Default is 0.5.
-#'
 #' @return A numeric value representing the B vs C true relative treatment effect
 #'
 #' @examples
@@ -12,33 +7,15 @@
 #' calc_true()
 #'
 #' @export
-calc_true <- function(em_strength = 0.1, overlap_param = 0.5) {
-  # Define parameters
-  mu_X1 <- 1
-  sigma_X1 <- 0.5
-  mu_X2 <- 0.5
-  sigma_X2 <- 0.1
+calc_true <- function() {
+  # Define treatment effect parameters
+  b_trt <- -2   # Treatment B vs A effect
+  c_trt <- -1.5 # Treatment C vs A effect
 
-  b_trt <- -2
-  b_X1 <- em_strength * sigma_X1
-  b_X2 <- em_strength * sigma_X2
-
-  c_trt <- -1.5
-  c_X1 <- b_X1
-  c_X2 <- b_X2
-
-  # Expected mean of X1, X2 in AC population
-  AC_X1_mean <- (1.1 + (1 - overlap_param)^2) * mu_X1
-  AC_X2_mean <- (1.1 + (1 - overlap_param)^2) * mu_X2
-
-  # Effect of B vs A in AC population
-  d_AB_AC <- b_trt + b_X1 * (AC_X1_mean - mu_X1) + b_X2 * (AC_X2_mean - mu_X2)
-
-  # Effect of C vs A in AC population
-  d_AC_AC <- c_trt + c_X1 * (AC_X1_mean - mu_X1) + c_X2 * (AC_X2_mean - mu_X2)
-
-  # Effect of C vs B in AC population
-  d_BC_AC <- d_AC_AC - d_AB_AC
+  # Effect of C vs B = (C vs A) - (B vs A)
+  # With shared effect modifiers, the covariate adjustment terms cancel out
+  # d_BC_AC = (c_trt + effect_modifiers) - (b_trt + effect_modifiers) = c_trt - b_trt
+  d_BC_AC <- c_trt - b_trt
 
   return(d_BC_AC)
 }

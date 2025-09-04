@@ -24,9 +24,6 @@ Default is 0.1.}
 \item{data_overlap_param}{A numeric value representing the overlap between the AB
 and AC trial populations. Default is 0.5.}
 
-\item{data_shared_em}{A logical value indicating whether the shared effect modifier
-assumption is TRUE or not. Default is TRUE.}
-
 \item{data_adjust_all}{A logical value indicating whether to adjust by all effect
 modifiers. Default is TRUE.}
 

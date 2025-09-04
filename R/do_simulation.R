@@ -31,10 +31,7 @@ do_simulation <- function(N_sim = 1000, seed = 1234, data_N = 500, data_em_stren
   set.seed(seed)
   sim_seeds <- sample.int(.Machine$integer.max, N_sim, replace = FALSE)
 
-  true_val <- calc_true(
-    em_strength = data_em_strength,
-    overlap_param = data_overlap_param
-  )
+  true_val <- calc_true()
 
   results_df <- data.frame(matrix(nrow = N_sim, ncol = 24))
   colnames(results_df) <- c("maic_log_OR", "maic_se", "N", "ESS", "ESS_N_ratio",
