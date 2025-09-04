@@ -5,7 +5,6 @@
 #' @param mu_X2 Numeric. The mean of effect modifer X2
 #' @param sigma_X2 Numeric. The standard deviation of effect modifer X2
 #' @param N Numeric. The number of subjects in the population
-#' @param overlap_params Numeric. Representing the amount of population overlap.
 #' @param seed Numeric. The random seed.
 #' @param x_axis_max Numeric. The x-axis maximum value. Default is NULL, where it
 #' is calculated automatically.

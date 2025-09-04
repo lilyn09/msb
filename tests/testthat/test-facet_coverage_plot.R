@@ -16,7 +16,7 @@ test_that("facet_coverage_plot returns ggplot object", {
 
 test_that("function throws error when datasets and facet_names have different lengths", {
   expect_error(
-    facet_bias_plot(
+    facet_coverage_plot(
       datasets = datasets,
       facet_names = c("Group1")
     ),
@@ -24,16 +24,15 @@ test_that("function throws error when datasets and facet_names have different le
   )
 })
 
-test_that("facet_bias_plot visual snapshot", {
+test_that("facet_coverage_plot visual snapshot", {
   skip_if_not_installed("vdiffr")
 
-  plot <- facet_bias_plot(
+  plot <- facet_coverage_plot(
     datasets = datasets,
     facet_names = c("Facet 1", "Facet 2"), 
     max_val = 2,
     title = "My Plot"
   )
-  
-  # Visual snapshot test
-  vdiffr::expect_doppelganger("facet_bias_plot_custom", plot)
+
+  vdiffr::expect_doppelganger("facet_coverage_plot_custom", plot)
 })

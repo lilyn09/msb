@@ -33,8 +33,7 @@ test_that("facet_bias_plot visual snapshot", {
     max_val = 2,
     title = "My Plot"
   )
-  
-  # Visual snapshot test
+
   vdiffr::expect_doppelganger("facet_bias_plot_custom", plot)
 })
 

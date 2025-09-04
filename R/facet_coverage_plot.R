@@ -25,6 +25,9 @@
 #' @export
 facet_coverage_plot <- function(datasets, facet_names, max_val = NULL, title = NULL, level = 0.95,
                                 true_val = 0.5) {
+  if(length(datasets) != length(facet_names)) {
+    stop("The number of datasets must equal the number of facet names")
+  }
 
   methods <- c("maic", "stc", "bucher")
 
