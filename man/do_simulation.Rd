@@ -41,7 +41,7 @@ Default is 1000.}
 A list containing a data.frame `results_df` and numeric `true_val`
 }
 \description{
-Function to run simulations
+This function performs multiple simulation runs comparing MAIC, STC, and Bucher methods.
 }
 \examples{
 do_simulation(10)

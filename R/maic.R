@@ -1,11 +1,13 @@
-#' Objective Function used in Weight Calculation
+#' Objective Function for Weight Optimization
 #'
-#' This function calculates the sum of the exponentials of the matrix product of "X" and "a1"
+#' Computes the sum of exponentials of linear combinations used in weight calculation algorithms.
+#' This function serves as the objective function to be minimised during the weight optimisation process.
 #'
-#' @param a1 A numeric vector.
-#' @param X A numeric matrix.
+#' @param a1 A numeric vector of coefficients/parameters to be optimised.
+#' @param X A numeric matrix where each row represents an observation and each column represents a covariate.
 #'
-#' @return A numeric value representing the sum of the exponentials of the matrix product of "X" and "a1".
+#' @return A numeric scalar representing the sum of exp(X %*% a1), which measures the 
+#'   total exponential weight across all observations.
 #'
 #' @examples
 #' a1 <- c(0.1, 0.2)
@@ -17,15 +19,16 @@ objfn <- function(a1, X){
   sum(exp(X %*% a1))
 }
 
-#' Gradient Function used in Weight Calculation
+#' Gradient Function for Weight Optimization
 #'
-#' This function calculates the gradient of a given matrix "X" and a vector "a1".
+#' Computes the gradient of the objective function with respect to the parameter vector.
+#' This gradient is used in optimisation algorithms to find optimal weights.
 #'
-#' @param a1 A numeric vector.
-#' @param X A numeric matrix.
+#' @param a1 A numeric vector of coefficients/parameters.
+#' @param X A numeric matrix where each row represents an observation and each column represents a covariate.
 #'
-#' @return A numeric vector representing the column sums of the element-wise product of "X" and the exponential
-#' of the matrix product of "X" and "a1".
+#' @return A numeric vector of containing the partial derivatives of the 
+#'   objective function with respect to each element of a1.
 #'
 #' @examples
 #' a1 <- c(1, 2, 3, 4)
@@ -37,19 +40,13 @@ gradfn <- function(a1, X){
   colSums(sweep(X, 1, exp(X %*% a1), "*"))
 }
 
-#' Calculate Effective Sample Size (ESS)
-#'
-#' This function calculates the Effective Sample Size (ESS) from the provided weights.
-#'
-#' @param wt A numeric vector of weights.
-#' @return A single numeric value representing the Effective Sample Size (ESS).
-#' @examples
-#'
-#' weights <- c(0.1, 0.2, 0.3)
-#' msb:::ess <- ess_calc(weights)
-#'
+#' Calculate effective sample size
+#' 
+#' This function computes Effective Sample Size (ESS).
+#' 
+#' @param wt Weight vector.
+#' @return Effective sample size.
 #' @noRd
-
 ess_calc <- function(wt) {
   sum(wt)^2 / sum(wt^2)
 }

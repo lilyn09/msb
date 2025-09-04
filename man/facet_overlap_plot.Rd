@@ -55,7 +55,7 @@ Default is c(1, 0.5, 0.25).}
 A ggplot of population overlap
 }
 \description{
-Function to plot overlap
+This function creates a faceted plot showing population overlap between AB and AC trials.
 }
 \examples{
 facet_overlap_plot()

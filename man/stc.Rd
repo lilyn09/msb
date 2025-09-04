@@ -21,7 +21,7 @@ A data.frame of stc results, consisting of stc_log_OR, stc_se, stc_ci_lower,
 and stc_ci_upper.
 }
 \description{
-Function to do STC
+This function performs simulated treatment comparison (STC).
 }
 \examples{
 # generate data

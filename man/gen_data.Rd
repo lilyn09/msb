@@ -22,7 +22,7 @@ A list of data.frames. Consists of AB_IPD which represents the IPD from the AB t
 and AC_aggregate which represents the aggregate data from the AC trial.
 }
 \description{
-Function to generate data
+This function generates simulated individual patient data (IPD) for the AB trial and aggregate data for the AC trial.
 }
 \examples{
 gen_data()

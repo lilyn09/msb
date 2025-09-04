@@ -17,7 +17,7 @@ A data.frame of bucher results, consisting of bucher_log_OR, bucher_se,
 bucher_ci_lower, and bucher_ci_upper.
 }
 \description{
-Function to do Bucher Method
+This function performs the Bucher method.
 }
 \examples{
 # generate data

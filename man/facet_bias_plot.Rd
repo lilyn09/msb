@@ -21,7 +21,7 @@ title is automatically "Bias Plot".}
 A ggplot of MAIC, STC and Bucher bias values.
 }
 \description{
-Function to create a faceted bias plot
+This function creates a faceted plot displaying bias for MAIC, STC, and Bucher methods across different simulation scenarios.
 }
 \examples{
 simulation_df_1 <- do_simulation(10, data_overlap_param = 1)

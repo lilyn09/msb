@@ -10,7 +10,7 @@ calc_true()
 A numeric value representing the B vs C true relative treatment effect
 }
 \description{
-Function to calculate true values
+This function calculates the true treatment.
 }
 \examples{
 

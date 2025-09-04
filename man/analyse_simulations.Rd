@@ -13,7 +13,7 @@ analyse_simulations(sim_results)
 A list containing data.frames `shared_results` and `maic_wts_results`
 }
 \description{
-Function to analyse simulations
+This function analyses simulation results to calculate bias, coverage, and standard error statistics for MAIC, STC, and Bucher methods.
 }
 \examples{
 sim_results <- do_simulation(10)

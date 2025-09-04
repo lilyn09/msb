@@ -34,7 +34,7 @@ is 0.95.}
 A ggplot of MAIC, STC and Bucher coverage values.
 }
 \description{
-Function to create a faceted coverage plot
+This function creates a faceted plot displaying confidence interval coverage statistics for MAIC, STC, and Bucher methods across different scenarios.
 }
 \examples{
 simulation_df_1 <- do_simulation(10, data_overlap_param = 1)$results_df

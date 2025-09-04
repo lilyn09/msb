@@ -17,7 +17,7 @@ in the table to. Default is 3.}
 a flextable
 }
 \description{
-Function to generate table of study statistics
+This function formats simulation study statistics into a flextable.
 }
 \examples{
 simulation_df <- do_simulation(10)

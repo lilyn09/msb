@@ -31,7 +31,7 @@ A data.frame of maic results, consisting of maic_log_OR, maic_ESS,
 maic_se, maic_ci_lower, and maic_ci_upper.
 }
 \description{
-Function to do MAIC
+This function performs matching-adjusted indirect comparison (MAIC).
 }
 \examples{
 # generate data
