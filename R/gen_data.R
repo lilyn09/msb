@@ -5,8 +5,6 @@
 #' is 0.1.
 #' @param overlap_param. A numeric value representing the overlap between the AB and AC trial
 #' populations. Default is 0.5.
-#' @param shared_em. A logical value indicating whether the shared effect modifier assumption
-#' is true or not. Default is TRUE.
 #' @param seed. An integer value representing the random seed. Default is 123.
 #'
 #' @return A list of data.frames. Consists of AB_IPD which represents the IPD from the AB trial,
@@ -18,7 +16,7 @@
 #' @importFrom magrittr %>%
 #' @export
 
-gen_data <- function(N = 500, em_strength = 0.5, overlap_param = 0.5, shared_em = TRUE, seed = 123) {
+gen_data <- function(N = 500, em_strength = 0.5, overlap_param = 0.5, seed = 123) {
   set.seed(seed)
 
   mu_X1 <- 1
@@ -33,13 +31,9 @@ gen_data <- function(N = 500, em_strength = 0.5, overlap_param = 0.5, shared_em 
   b_trt <- -2
 
   c_0 <- 1.5
-  if (shared_em == TRUE) {
-    c_X1 <- b_X1
-    c_X2 <- b_X2
-  } else {
-    c_X1 <- shared_em * sigma_X1
-    c_X2 <- shared_em * sigma_X2
-  }
+  # Always use shared effect modifier assumption
+  c_X1 <- b_X1
+  c_X2 <- b_X2
   c_trt <- -1.5
 
   # AB IPD

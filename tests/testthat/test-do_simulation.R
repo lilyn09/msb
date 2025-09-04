@@ -48,6 +48,5 @@ test_that("do_simulation handles different parameters", {
   # Test different data parameters
   expect_no_error(do_simulation(N_sim = 2, data_N = 100, data_em_strength = 0))
   expect_no_error(do_simulation(N_sim = 2, data_N = 100, data_overlap_param = 0))
-  expect_no_error(do_simulation(N_sim = 2, data_N = 100, data_shared_em = FALSE))
   expect_no_error(do_simulation(N_sim = 2, data_N = 100, data_adjust_all = FALSE))
 })

@@ -39,5 +39,4 @@ test_that("gen_data handles edge cases", {
   expect_no_error(gen_data(em_strength = 0))
   expect_no_error(gen_data(overlap_param = 0))
   expect_no_error(gen_data(overlap_param = 1))
-  expect_no_error(gen_data(shared_em = FALSE))
 })

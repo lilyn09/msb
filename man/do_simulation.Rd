@@ -10,7 +10,6 @@ do_simulation(
   data_N = 500,
   data_em_strength = 0.5,
   data_overlap_param = 0.5,
-  data_shared_em = TRUE,
   data_adjust_all = TRUE,
   wts_type = c("rescaled_weights", "weights")
 )

@@ -9,8 +9,6 @@
 #' Default is 0.1.
 #' @param data_overlap_param A numeric value representing the overlap between the AB
 #' and AC trial populations. Default is 0.5.
-#' @param data_shared_em A logical value indicating whether the shared effect modifier
-#' assumption is TRUE or not. Default is TRUE.
 #' @param data_adjust_all A logical value indicating whether to adjust by all effect
 #' modifiers. Default is TRUE.
 #' @param wts_type A character string specifying the type of weights to use in MAIC. 
@@ -26,7 +24,7 @@
 #' @export
 
 do_simulation <- function(N_sim = 1000, seed = 1234, data_N = 500, data_em_strength = 0.5,
-                          data_overlap_param = 0.5, data_shared_em = TRUE, data_adjust_all = TRUE,
+                          data_overlap_param = 0.5, data_adjust_all = TRUE,
                           wts_type = c("rescaled_weights", "weights")) {
   type <- match.arg(wts_type)
 
@@ -35,8 +33,7 @@ do_simulation <- function(N_sim = 1000, seed = 1234, data_N = 500, data_em_stren
 
   true_val <- calc_true(
     em_strength = data_em_strength,
-    overlap_param = data_overlap_param,
-    shared_em = data_shared_em
+    overlap_param = data_overlap_param
   )
 
   results_df <- data.frame(matrix(nrow = N_sim, ncol = 24))
@@ -51,7 +48,6 @@ do_simulation <- function(N_sim = 1000, seed = 1234, data_N = 500, data_em_stren
     sim_data <- gen_data(N = data_N,
                          em_strength = data_em_strength,
                          overlap_param = data_overlap_param,
-                         shared_em = data_shared_em,
                          seed = sim_seeds[i])
     results_df[i, 1:16] <- maic(sim_data$AB_IPD, sim_data$AC_aggregate, adjust_all = data_adjust_all, type = type)
     results_df[i, 17:20] <- stc(sim_data$AB_IPD, sim_data$AC_aggregate, adjust_all = data_adjust_all)

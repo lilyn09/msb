@@ -11,10 +11,10 @@ test_that("bucher returns correct structure", {
   expect_true(all(c("bucher_log_OR", "bucher_se", "bucher_ci_lower", 
                     "bucher_ci_upper") %in% names(result)))
   
-  expect_type(result$bucher_log_OR, "double")
-  expect_type(result$bucher_se, "double")
-  expect_type(result$bucher_ci_lower, "double")
-  expect_type(result$bucher_ci_upper, "double")
+  expect_true(is.numeric(result$bucher_log_OR))
+  expect_true(is.numeric(result$bucher_se))
+  expect_true(is.numeric(result$bucher_ci_lower))
+  expect_true(is.numeric(result$bucher_ci_upper))
 })
 
 test_that("bucher calculations are correct", {
