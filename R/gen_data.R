@@ -3,11 +3,11 @@
 #' This function generates simulated individual patient data (IPD) for the AB trial and aggregate data for the AC trial.
 #'
 #' @param N An integer representing the number of subjects in the trial. Default is 500.
-#' @param em_strength. A numeric value representing the effect modifier strength. Default
-#' is 0.1.
-#' @param overlap_param. A numeric value representing the overlap between the AB and AC trial
+#' @param em_strength A numeric value representing the effect modifier strength. Default
+#' is 0.5.
+#' @param overlap_param A numeric value representing the overlap between the AB and AC trial
 #' populations. Default is 0.5.
-#' @param seed. An integer value representing the random seed. Default is 123.
+#' @param seed An integer value representing the random seed. Default is 123.
 #'
 #' @return A list of data.frames. Consists of AB_IPD which represents the IPD from the AB trial,
 #' and AC_aggregate which represents the aggregate data from the AC trial.

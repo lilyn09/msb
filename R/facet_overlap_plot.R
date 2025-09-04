@@ -16,9 +16,9 @@
 #' is calculated automatically.
 #' @param y_axis_min Numeric. The y-axis minimum value. Default is NULL, where it
 #' is calculated automatically.
-#' @param plot_title. String representing the plot title. Default is "Varying
+#' @param plot_title String representing the plot title. Default is "Varying
 #' Population Overlap".
-#' @param overlap_params. A vector of numerics representing the overlap parameters.
+#' @param overlap_params A vector of numerics representing the overlap parameters.
 #' Default is c(1, 0.5, 0.25).
 #'
 #' @return A ggplot of population overlap
