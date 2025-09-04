@@ -14,8 +14,8 @@
 #' @return A ggplot of MAIC, STC and Bucher coverage values.
 #'
 #' @examples
-#' simulation_df_1 <- do_simulation(10)$results_df
-#' simulation_df_2 <- do_simulation(10)$results_df
+#' simulation_df_1 <- do_simulation(10, data_overlap_param = 1)$results_df
+#' simulation_df_2 <- do_simulation(10, data_overlap_param = 0.75)$results_df
 #' 
 #' datasets <- list(simulation_df_1, simulation_df_2)
 #'

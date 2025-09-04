@@ -10,7 +10,7 @@
 #' bounds of the confidence interval respectively
 #'
 #' @examples
-#' calc_ci(3, 0.2)
+#' msb:::calc_ci(3, 0.2)
 #'
 #' @noRd
 calc_ci <- function(x, se, alpha = 0.05) {

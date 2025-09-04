@@ -24,8 +24,8 @@ A ggplot of MAIC, STC and Bucher se values.
 Function to create a faceted se plot
 }
 \examples{
-simulation_df_1 <- do_simulation(10)
-simulation_df_2 <- do_simulation(10)
+simulation_df_1 <- do_simulation(10, data_overlap_param = 1)
+simulation_df_2 <- do_simulation(10, , data_overlap_param = 0.75)
 
 stats_df_1 <- analyse_simulations(simulation_df_1)$shared_results
 stats_df_2 <- analyse_simulations(simulation_df_2)$shared_results

@@ -4,17 +4,7 @@
 \alias{calc_true}
 \title{Function to calculate true values}
 \usage{
-calc_true(em_strength = 0.1, overlap_param = 0.5, shared_em = TRUE)
-}
-\arguments{
-\item{em_strength.}{A numeric value representing the effect modifier strength. Default
-is 0.1.}
-
-\item{overlap_param.}{A numeric value representing the overlap between the AB and AC trial
-populations. Default is 0.5.}
-
-\item{shared_em.}{A logical value indicating whether the shared effect modifier assumption
-is true or not. Default is TRUE.}
+calc_true()
 }
 \value{
 A numeric value representing the B vs C true relative treatment effect

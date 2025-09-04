@@ -45,8 +45,6 @@ is calculated automatically.}
 \item{y_axis_min}{Numeric. The y-axis minimum value. Default is NULL, where it
 is calculated automatically.}
 
-\item{overlap_params}{Numeric. Representing the amount of population overlap.}
-
 \item{plot_title.}{String representing the plot title. Default is "Varying
 Population Overlap".}
 

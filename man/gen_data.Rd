@@ -4,13 +4,7 @@
 \alias{gen_data}
 \title{Function to generate data}
 \usage{
-gen_data(
-  N = 500,
-  em_strength = 0.5,
-  overlap_param = 0.5,
-  shared_em = TRUE,
-  seed = 123
-)
+gen_data(N = 500, em_strength = 0.5, overlap_param = 0.5, seed = 123)
 }
 \arguments{
 \item{N}{An integer representing the number of subjects in the trial. Default is 500.}
@@ -20,9 +14,6 @@ is 0.1.}
 
 \item{overlap_param.}{A numeric value representing the overlap between the AB and AC trial
 populations. Default is 0.5.}
-
-\item{shared_em.}{A logical value indicating whether the shared effect modifier assumption
-is true or not. Default is TRUE.}
 
 \item{seed.}{An integer value representing the random seed. Default is 123.}
 }
