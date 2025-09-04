@@ -1,10 +1,7 @@
  simulation_df_1 <- do_simulation(N_sim = 10, data_overlap_param = 0.5)
  simulation_df_2 <- do_simulation(N_sim = 10, data_overlap_param = 0.75)
 
- stats_df_1 <- analyse_simulations(simulation_df_1)$shared_results
- stats_df_2 <- analyse_simulations(simulation_df_2)$shared_results
-
- datasets <- list(stats_df_1, stats_df_2)
+ datasets <- list(simulation_df_1$results_df, simulation_df_2$results_df)
  facet_names = c("Overlap 0.5", "Overlap 0.75")
 
 test_that("facet_coverage_plot returns ggplot object", {
@@ -30,7 +27,6 @@ test_that("facet_coverage_plot visual snapshot", {
   plot <- facet_coverage_plot(
     datasets = datasets,
     facet_names = c("Facet 1", "Facet 2"), 
-    max_val = 2,
     title = "My Plot"
   )
 
