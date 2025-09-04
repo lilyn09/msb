@@ -18,7 +18,7 @@ analyse_simulations <- function(sim_results) {
       maic_abs_bias = mean(abs(maic_log_OR - true_value), na.rm = TRUE),
       maic_bias = mean((maic_log_OR - true_value), na.rm = TRUE),
       maic_bias_mcse = stats::sd(maic_log_OR, na.rm = TRUE) / sqrt(sum(!is.na(maic_log_OR))),
-      maic_bias_pct = mean((maic_log_OR - true_value) / true_value * 100, na.rm = TRUE),
+      maic_bias_pct = mean((maic_log_OR - true_value) / abs(true_value) * 100, na.rm = TRUE),
       maic_empSE = stats::sd(maic_log_OR, na.rm = TRUE),
       maic_empSE_mcse = if(sum(!is.na(maic_log_OR)) > 1) {
         stats::sd(maic_log_OR, na.rm = TRUE) / sqrt(2 * (sum(!is.na(maic_log_OR)) - 1))
@@ -96,7 +96,8 @@ analyse_simulations <- function(sim_results) {
     dplyr::select("N", "ESS", "ESS_N_ratio",
                   "Min", "Q1", "Median", "Q3", "Max", "Mean", "SD",
                   "zero_weights", "greater_than_three_weights") %>%
-    colMeans(na.rm = TRUE)
+    colMeans(na.rm = TRUE) %>%
+    as.data.frame()
 
   list(shared_results = shared_results,
        maic_wts_results = maic_wts_results)
