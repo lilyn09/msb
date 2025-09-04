@@ -46,6 +46,10 @@ gradfn <- function(a1, X){
 #' 
 #' @param wt Weight vector.
 #' @return Effective sample size.
+#' 
+#' @examples
+#' ess_calc(c(0.1, 0.2, 0.3))
+#' 
 #' @noRd
 ess_calc <- function(wt) {
   sum(wt)^2 / sum(wt^2)

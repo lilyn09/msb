@@ -1,6 +1,6 @@
 Type: Package
 Package: msb
-Title: Simulate indirect comparison methods MAIC, STC, and the Bucher method.
+Title: Simulate indirect comparison methods MAIC, STC, and the Bucher method
 Version: 0.1.0
 Author: Lily Nan [aut, cre]
 Maintainer: Lily Nan <lilynan09@gmail.com>
@@ -17,6 +17,8 @@ Imports:
     ggplot2,
     magrittr,
     rlang,
+    sandwich,
     tidyr
 Suggests: 
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    vdiffr

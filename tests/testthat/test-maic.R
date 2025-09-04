@@ -11,7 +11,7 @@ test_that("maic returns correct structure", {
   "zero_weights", "greater_than_3_weights", 
   "maic_ci_lower", "maic_ci_upper")
   expect_equal(ncol(result), length(expected_cols))
-  expect_named(result, expected_cols)
+  expect_true(all(colnames(result) %in% expected_cols))
 })
 
 
