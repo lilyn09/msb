@@ -28,7 +28,7 @@
 #'
 #' @export
 facet_overlap_plot <- function(mu_X1 = 1, sigma_X1 = 0.5, mu_X2 = 0.5, sigma_X2 = 0.1,
-                               N = 500, overlap_param = 0.75, seed = 123,
+                               N = 500, seed = 123,
                                x_axis_max = NULL, y_axis_max = NULL,
                                x_axis_min = NULL, y_axis_min = NULL,
                                plot_title = "Varying Population Overlap",

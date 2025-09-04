@@ -9,13 +9,13 @@ gen_data(N = 500, em_strength = 0.5, overlap_param = 0.5, seed = 123)
 \arguments{
 \item{N}{An integer representing the number of subjects in the trial. Default is 500.}
 
-\item{em_strength.}{A numeric value representing the effect modifier strength. Default
-is 0.1.}
+\item{em_strength}{A numeric value representing the effect modifier strength. Default
+is 0.5.}
 
-\item{overlap_param.}{A numeric value representing the overlap between the AB and AC trial
+\item{overlap_param}{A numeric value representing the overlap between the AB and AC trial
 populations. Default is 0.5.}
 
-\item{seed.}{An integer value representing the random seed. Default is 123.}
+\item{seed}{An integer value representing the random seed. Default is 123.}
 }
 \value{
 A list of data.frames. Consists of AB_IPD which represents the IPD from the AB trial,

@@ -15,6 +15,11 @@ do_simulation(
 )
 }
 \arguments{
+\item{N_sim}{An integer value representing the number of times to repeat each simulation.
+Default is 1000.}
+
+\item{seed}{An integer value representing the random seed. Default is 1234.}
+
 \item{data_N}{An integer value representing the number of subjects in each trial.
 Default is 500.}
 
@@ -31,11 +36,6 @@ modifiers. Default is TRUE.}
 Options are "rescaled_weights" or "weights". "rescaled_weights" 
 rescales the weights so they sum to the original sample size, while "weights" 
 uses the raw propensity score weights. Default is "rescaled weights".}
-
-\item{N_sim.}{An integer value representing the number of times to repeat each simulation.
-Default is 1000.}
-
-\item{seed.}{An integer value representing the random seed. Default is 1234.}
 }
 \value{
 A list containing a data.frame `results_df` and numeric `true_val`

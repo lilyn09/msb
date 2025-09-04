@@ -10,7 +10,6 @@ facet_overlap_plot(
   mu_X2 = 0.5,
   sigma_X2 = 0.1,
   N = 500,
-  overlap_param = 0.75,
   seed = 123,
   x_axis_max = NULL,
   y_axis_max = NULL,
@@ -45,10 +44,10 @@ is calculated automatically.}
 \item{y_axis_min}{Numeric. The y-axis minimum value. Default is NULL, where it
 is calculated automatically.}
 
-\item{plot_title.}{String representing the plot title. Default is "Varying
+\item{plot_title}{String representing the plot title. Default is "Varying
 Population Overlap".}
 
-\item{overlap_params.}{A vector of numerics representing the overlap parameters.
+\item{overlap_params}{A vector of numerics representing the overlap parameters.
 Default is c(1, 0.5, 0.25).}
 }
 \value{
