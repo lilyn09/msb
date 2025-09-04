@@ -8,7 +8,7 @@ The `msb` package provides tools to simulate and evaluate the performance of ind
 - **STC** (Simulated Treatment Comparison) 
 - **Bucher Method**
 
-This package was developed as part of a university research project in the third year of my undergraduate degree.
+*This package was developed as part of a university research project in the third year of my undergraduate degree, whilst also working full-time as a programmer at a pharmaceutical company.*
 
 ## Features
 
