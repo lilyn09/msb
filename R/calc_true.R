@@ -1,5 +1,7 @@
 #' Function to calculate true values
 #'
+#' This function calculates the true treatment.
+#'
 #' @return A numeric value representing the B vs C true relative treatment effect
 #'
 #' @examples

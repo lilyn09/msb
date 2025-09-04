@@ -1,5 +1,7 @@
 #' Function to generate table of study statistics
 #'
+#' This function formats simulation study statistics into a flextable.
+#'
 #' @param stats_df A data.frame of statistics from the simulation study. An output
 #' of `analyse_statistics()`.
 #' @param dp An integer representing the number of decimal places to round statistics

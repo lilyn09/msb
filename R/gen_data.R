@@ -1,5 +1,7 @@
 #' Function to generate data
 #'
+#' This function generates simulated individual patient data (IPD) for the AB trial and aggregate data for the AC trial.
+#'
 #' @param N An integer representing the number of subjects in the trial. Default is 500.
 #' @param em_strength. A numeric value representing the effect modifier strength. Default
 #' is 0.1.

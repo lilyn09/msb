@@ -1,5 +1,7 @@
 #' Function to analyse simulations
 #'
+#' This function analyses simulation results to calculate bias, coverage, and standard error statistics for MAIC, STC, and Bucher methods.
+#'
 #' @param sim_results A list of simulation results. The output from `do_simulation()`.
 #'
 #' @return A list containing data.frames `shared_results` and `maic_wts_results`

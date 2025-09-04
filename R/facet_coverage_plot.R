@@ -1,5 +1,7 @@
 #' Function to create a faceted coverage plot
 #'
+#' This function creates a faceted plot displaying confidence interval coverage statistics for MAIC, STC, and Bucher methods across different scenarios.
+#'
 #' @param datasets A list of data.frames of statistics from the simulation study.
 #' @param facet_names A vector of facet names.
 #' @param max_val A numeric representing the x-axis limit. Default is NULL, where

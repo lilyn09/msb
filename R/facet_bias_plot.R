@@ -1,5 +1,7 @@
 #' Function to create a faceted bias plot
 #'
+#' This function creates a faceted plot displaying bias for MAIC, STC, and Bucher methods across different simulation scenarios.
+#'
 #' @param datasets A list of data.frames of statistics from the simulation study.
 #' @param facet_names A vector of facet names.
 #' @param max_val A numeric representing the x-axis limit. Default is NULL, where

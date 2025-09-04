@@ -1,5 +1,7 @@
 #' Function to run simulations
 #'
+#' This function performs multiple simulation runs comparing MAIC, STC, and Bucher methods.
+#'
 #' @param N_sim. An integer value representing the number of times to repeat each simulation.
 #' Default is 1000.
 #' @param seed. An integer value representing the random seed. Default is 1234.

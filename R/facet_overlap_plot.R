@@ -1,5 +1,7 @@
 #' Function to plot overlap
 #'
+#' This function creates a faceted plot showing population overlap between AB and AC trials.
+#'
 #' @param mu_X1 Numeric. The mean of effect modifier X1
 #' @param sigma_X1 Numeric. The standard deviation of effect modifier X1
 #' @param mu_X2 Numeric. The mean of effect modifer X2
