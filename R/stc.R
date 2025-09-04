@@ -47,7 +47,7 @@ stc <- function(AB_IPD, AC_aggregate, adjust_all = TRUE) {
   var.d.BC.STC.log <- var.d.AC.log + var.d.AB.STC.log
 
   # Confidence interval
-  CI <- ci_from_x_and_se(d.BC.STC.log, sqrt(var.d.BC.STC.log))
+  CI <- calc_ci(d.BC.STC.log, sqrt(var.d.BC.STC.log))
 
   # Results
   results <-

@@ -42,7 +42,7 @@ bucher <- function(AB_IPD, AC_aggregate) {
   var.d.BC.Bucher.log <- var.d.AC.log + var.d.AB.AB.log
 
   # Confidence interval
-  CI <- ci_from_x_and_se(d.BC.Bucher.log, sqrt(var.d.BC.Bucher.log))
+  CI <- calc_ci(d.BC.Bucher.log, sqrt(var.d.BC.Bucher.log))
 
   # Results
   results <-

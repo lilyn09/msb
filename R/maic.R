@@ -129,7 +129,7 @@ maic <- function(AB_IPD, AC_aggregate, adjust_all = TRUE, type = c("rescaled_wei
     var.d.BC.MAIC.log <- var.d.AC.log + var.d.AB.MAIC.log
 
     # Confidence interval
-    CI <- ci_from_x_and_se(d.BC.MAIC.log, sqrt(var.d.BC.MAIC.log))
+    CI <- calc_ci(d.BC.MAIC.log, sqrt(var.d.BC.MAIC.log))
 
     wt_df <- data.frame(
       unrescaled_weights = wt,
