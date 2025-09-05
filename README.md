@@ -1,4 +1,7 @@
-# msb: Simulation of the Indirect Comparison Methods MAIC, STC, and the Bucher Method
+# msb: Simulation of the Indirect Comparison Methods MAIC, STC, and the Bucher Method 
+
+<div style="position: relative;">
+<img src="man/images/msb_logo.png" style="position: absolute; top: 40; right: 0; height: 139px;" />
 
 ## Overview
 
